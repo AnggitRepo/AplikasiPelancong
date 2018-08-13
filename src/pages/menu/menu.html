@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>menu</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-grid>
+		<ion-row>
+			<ion-col col-6 text-center>
+				<button ion-button icon-only (click)="input()"><ion-icon name="add" ></ion-icon></button>
+				<br>Input
+			</ion-col>
+			<ion-col col-6 text-center>
+				<button ion-button icon-only (click)="home()"><ion-icon name="home" ></ion-icon></button>
+				<br>Home
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-6 text-center>
+				<button ion-button icon-only (click)="Map()"><ion-icon name="map" ></ion-icon></button>
+				<br>Maps
+			</ion-col>
+			<ion-col col-6 text-center>
+				<button ion-button icon-only (click)="logout()"><ion-icon name="power" ></ion-icon></button>
+				<br>Logout
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

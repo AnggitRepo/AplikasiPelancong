@@ -1,0 +1,41 @@
+page-home {
+
+
+  .social-cards ion-col {
+      padding: 0;
+  }
+  .tutorial-page {
+      button[fab].fab-map {
+      top: calc(100% - 35px);
+      z-index: 50;
+    }
+    .toolbar-background {
+      background: #fff;
+      border-color: transparent;
+    } 
+    .slide-zoom {
+      height: 100%;
+    }
+    .slide-title {
+      margin-top: 2rem;
+    }
+    .slide-image {
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0 px 0;
+    }
+    
+    b {
+      font-weight: 500;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #60646B;
+      b {
+        color: #000000;
+      }
+    }
+  }
+
+}

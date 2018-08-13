@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class=" social-cards tutorial-page">
+  <ion-item *ngFor="let item of items">
+    <ion-card> 
+      <div style="position: relative">
+        <ion-slides pager>
+        <ion-slide>
+          <img src="{{item.gambar}}" class="slide-image">
+        </ion-slide>
+        <ion-slide>
+          <img src="{{item.gambar2}}" class="slide-image">
+        </ion-slide>
+      </ion-slides>
+      </div>
+      <ion-card-content text-wrap>
+        <ion-card-title style="font-weight: bold; text-align: center;">
+          {{item.nama}}
+        </ion-card-title>
+        <p>{{item.keterangan}}</p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='thumbs-up'></ion-icon>
+            {{item.like}}
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='thumbs-down'></ion-icon>
+            {{item.dislike}}
+          </button>
+        </ion-col>
+        <ion-col align-self-center text-center>
+          <ion-note>
+            {{item.date | date: "shortTime"}}
+          </ion-note>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-item>
+</ion-content>
+

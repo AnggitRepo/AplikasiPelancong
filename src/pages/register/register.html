@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>register</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<ion-label floating>Username</ion-label>
+			<ion-input [(ngModel)] = "newcreds.username" type="text" ></ion-input>
+		</ion-item> 
+		<ion-item>
+			<ion-label floating>Password</ion-label>
+			<ion-input [(ngModel)] = "newcreds.password" type="password" ></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-input [(ngModel)] = "newcreds.telp" type="number" placeholder="Telepon Number" ></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Email</ion-label>
+			<ion-input [(ngModel)] = "newcreds.email" type="email"></ion-input>
+		</ion-item>
+	</ion-list>
+	<ion-grid>
+		<div><button ion-button full (click)="register(newcreds)">Simpan</button></div>
+	</ion-grid>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>LOGIN</ion-title>
+	</ion-navbar>
+</ion-header>  
+
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<ion-label floating>Username</ion-label>
+			<ion-input [(ngModel)] = "usercreds.username" type="text"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Password</ion-label>
+			<ion-input [(ngModel)] = "usercreds.password" type="password"></ion-input>
+		</ion-item>
+	</ion-list>
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<div><button ion-button icon-left full (click)="login(usercreds)"><ion-icon name="unlock"></ion-icon>Login</button></div>
+			</ion-col>
+			<ion-col>
+				<div><button ion-button icon-left full (click)="signup()"><ion-icon name="person-add"></ion-icon>Register</button></div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

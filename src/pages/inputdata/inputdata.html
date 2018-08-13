@@ -1,0 +1,98 @@
+<ion-header>
+   <ion-navbar>
+      <ion-title>
+         Tambah Data 
+      </ion-title>
+   </ion-navbar>
+</ion-header>
+<ion-content padding>
+   <form [formGroup]="form">
+      <ion-list>
+         <ion-item margin-bottom>
+            <ion-label>Nama</ion-label>
+            <ion-input
+               type="text"
+               [(ngModel)]="nama" 
+               formControlName="nama"></ion-input>
+         </ion-item>
+         <ion-item margin-bottom>
+            <ion-label>Kategori</ion-label>
+            <ion-select
+               [(ngModel)]="kategori"
+               formControlName="kategori">
+               <ion-option value="Restauran">Restauran</ion-option>
+               <ion-option value="Rumah Sakit">Rumah Sakit</ion-option>
+               <ion-option value="Pom Bensin">Pom Bensin</ion-option>
+               <ion-option value="Cafe">Cafe</ion-option>
+               <ion-option value="A">ATM</ion-option>
+               <ion-option value="Toko">Toko</ion-option>
+               <ion-option value="Tempat Wisata">Tempat Wisata</ion-option>
+               <ion-option value="Lainya">Lain - Lain</ion-option>
+            </ion-select>
+         </ion-item>
+         <ion-item margin-bottom>
+            <ion-label>Keterangan</ion-label>
+            <ion-textarea
+               type="text"
+               [(ngModel)]="keterangan"
+               formControlName="keterangan"></ion-textarea>
+         </ion-item>
+         <ion-grid>
+            <ion-row>
+               <ion-col>
+                  <div>
+                     <ion-item-group>
+                        <ion-item>
+                                 <ion-col>
+                                    <div><button ion-button icon-left full (click)="takePhotograph()"><ion-icon name="camera"></ion-icon>Ambil</button></div>
+                                 </ion-col>
+                        </ion-item>
+                        <ion-item>
+                                 <ion-col>
+                                    <div>
+                                       <img [src]="image">
+                                       <input type="hidden" name="gambar" formControlName="gambar" [(ngModel)]="gambar">     
+                                    </div>
+                                 </ion-col>
+                        </ion-item>
+                     </ion-item-group>
+                  </div>
+               </ion-col>
+               <ion-col>
+                  <div>
+                     <ion-item-group>
+                        <ion-item>
+                                 <ion-col>
+                                    <div><button ion-button icon-left full (click)="takePhotograph2()"><ion-icon name="camera"></ion-icon>Ambil</button></div>
+                                 </ion-col>
+                        </ion-item>
+                        <ion-item>
+                                 <ion-col>
+                                    <div>
+                                       <img [src]="image2">
+                                       <input type="hidden" name="gambar2" formControlName="gambar2" [(ngModel)]="gambar2">     
+                                    </div>
+                                 </ion-col>
+                        </ion-item>
+                     </ion-item-group>
+                  </div>
+               </ion-col>
+            </ion-row>
+         </ion-grid>
+         <ion-item margin-bottom>
+            <ion-label>Is Displayed?</ion-label>
+            <ion-select
+               [(ngModel)]="displayed"
+               formControlName="displayed">
+               <ion-option value="true">True</ion-option>
+               <ion-option value="false">False</ion-option>
+            </ion-select>
+         </ion-item>
+         <button
+            ion-button
+            color="primary"
+            text-center
+            block [disabled]="!form.valid" (click)="manageGallery()">Save this record</button>
+      </ion-list>
+   </form>
+</ion-content>
